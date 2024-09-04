@@ -19,5 +19,6 @@ graph TD;
     5-lodging-process --> 6-lodging-process[Online Payment Options]
     5-lodging-process --> 7-lodging-process[Cash]
     6-lodging-process --> 8-lodging-process[G Cash]
-    6-lodging-process --> 9-lodging-process[PayMaya ]
+    6-lodging-process --> 9-lodging-process[PayMaya]
+    6-lodging-process --> 10-lodging-process[Other Options]
 :::
