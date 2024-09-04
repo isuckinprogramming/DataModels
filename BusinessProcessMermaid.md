@@ -8,17 +8,16 @@ Customers contacts the shop for Lodging and Catering services,or other purposes 
 
 ::: mermaid
 graph TD;
-    customer-contact[Customer places order]-->catering[catering];
     customer-contact-->lodging[lodging];
-    customer-contact-->cater-and-lodge[catering and lodging];
     customer-contact-->unexpected-variables[others];
-    catering-->1-catering-process[specify details]
-    1-catering-process-->2-catering-process[Date and Time] 
-    2-catering-process-->3-catering-process[Order Quantity and Items]
-    3-catering-process-->4-catering-process[Quantity of Customers]
-    4-catering-process-->5-catering-process[others]
     lodging-->1-lodging-process[Check Availability of rooms]
     1-lodging-process-->2-lodging-process[Reserve Quantity of Rooms]
-    2-lodging-process-->3-lodging-process[Specify date,time, and duration of lodging]
-
+    2-lodging-process-->3-lodging-process[Specify date,time,contact number, and duration of lodging]
+    3-lodging-process --> |Avail| 4-lodging-process[Catering Services]
+    3-lodging-process --> |Do not Avail| 5-lodging-process[Payment]
+    4-lodging-process --> 5-lodging-process
+    5-lodging-process --> 6-lodging-process[Online Payment Options]
+    5-lodging-process --> 7-lodging-process[Cash]
+    6-lodging-process --> 8-lodging-process[G Cash]
+    6-lodging-process --> 9-lodging-process[PayMaya ]
 :::
