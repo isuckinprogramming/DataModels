@@ -22,3 +22,5 @@ graph TD;
     6-lodging-process --> 9-lodging-process[PayMaya]
     6-lodging-process --> 10-lodging-process[Other Options]
 :::
+
+Not sure if payment happens before or after the purchase process is finish. 
